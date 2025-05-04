@@ -3,7 +3,7 @@ import { Routes, Route } from 'react-router-dom';
 import { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import HomePage from './pages/HomePage';
-import Login from './pages/auth/Login';
+import Login from './pages/Auth/Login';
 import Signup from './pages/Auth/Signup'
 import ProductPage from './pages/ProductPage';
 import CartPage from './features/CartPage';
