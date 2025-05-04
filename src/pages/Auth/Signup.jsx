@@ -30,7 +30,7 @@ const Signup=()=> {
 
     try {
       // Send the user data to the backend API
-      const response = await fetch('http://localhost:5000/user/signin', {
+      const response = await fetch('https://e-comm-backend-lake.vercel.app/user/signin', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

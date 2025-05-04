@@ -19,7 +19,7 @@ const CartPage = () => {
       }
   
       try {
-        const response = await fetch("http://localhost:5000/user/carts", {
+        const response = await fetch("https://e-comm-backend-lake.vercel.app/user/carts", {
           method: "GET",
           headers: {
             "Authorization": `Bearer ${token}`,
@@ -58,7 +58,7 @@ const CartPage = () => {
     try {
       const token = localStorage.getItem("token");
   
-      await fetch(`http://localhost:5000/user/removeCart/${productId}`, {
+      await fetch(`https://e-comm-backend-lake.vercel.app/user/removeCart/${productId}`, {
         method: "DELETE",
         headers: {
           Authorization: `Bearer ${token}`,
@@ -77,7 +77,7 @@ const CartPage = () => {
   
     console.log("🔑 Sending token:", token); // Log the token 
     try {
-      const response = await fetch(`http://localhost:5000/user/moveToWish/${productId}`, {
+      const response = await fetch(`https://e-comm-backend-lake.vercel.app/user/moveToWish/${productId}`, {
         method: "PUT",
         headers: {
           Authorization: `Bearer ${token}`,  // Send token in header

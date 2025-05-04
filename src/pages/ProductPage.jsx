@@ -10,7 +10,7 @@ const ProductPage = () => {
   useEffect(() => {
     const fetchProduct = async () => {
       try {
-        const response = await fetch("http://localhost:5000/products");
+        const response = await fetch("https://e-comm-backend-lake.vercel.app/products");
         if (!response.ok) {
           throw new Error("Network response was not ok");
         }
@@ -33,7 +33,7 @@ const ProductPage = () => {
     }
 
     try {
-      const response = await fetch("http://localhost:5000/user/cart", {
+      const response = await fetch("https://e-comm-backend-lake.vercel.app/user/cart", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -61,7 +61,7 @@ const ProductPage = () => {
     }
 
     try {
-      const response = await fetch("http://localhost:5000/user/wishlist", {
+      const response = await fetch("https://e-comm-backend-lake.vercel.app/user/wishlist", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

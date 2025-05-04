@@ -11,7 +11,7 @@ const WishlistPage = () => {
   useEffect(() => {
     const fetchWishlist = async () => {
       try {
-        const res = await axios.get('http://localhost:5000/user/wishlisted', {
+        const res = await axios.get('https://e-comm-backend-lake.vercel.app/user/wishlisted', {
           headers: {
             Authorization: `Bearer ${localStorage.getItem('token')}`,
           },
@@ -39,7 +39,7 @@ const WishlistPage = () => {
     try {
       const token = localStorage.getItem("token");
   
-      await fetch(`http://localhost:5000/user/removeWishlist/${productId}`, {
+      await fetch(`https://e-comm-backend-lake.vercel.app/user/removeWishlist/${productId}`, {
         method: "DELETE",
         headers: {
           Authorization: `Bearer ${token}`,
@@ -58,7 +58,7 @@ const WishlistPage = () => {
   
     console.log("🔑 Sending token:", token); // Log token
     try {
-      const response = await fetch(`http://localhost:5000/user/moveToCart/${productId}`, {
+      const response = await fetch(`https://e-comm-backend-lake.vercel.app/user/moveToCart/${productId}`, {
         method: "PUT",
         headers: {
           Authorization: `Bearer ${token}`, // Send token in header
